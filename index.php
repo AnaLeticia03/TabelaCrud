@@ -38,8 +38,7 @@ $p = new Pessoa();
                 <td>TELEFONE</td>
                 <td colspan="2">EMAIL</td>
             </tr>
-
-            <?php
+            <<<<<<< HEAD <?php
             $dados= $p -> buscarDados();
             if(count($dados) > 0){
                 for($i=0; $i< count($dados); $i++){
@@ -50,9 +49,8 @@ $p = new Pessoa();
                             
                         }
                     }
-                    ?>
-            <td> <a href="">Editar</a><a href="">Excluir</a></td>;
-            <?php
+                    ?> <td> <a href="">Editar</a><a href="">Excluir</a></td>;
+                <?php
             echo "</tr>";
             }
             }
