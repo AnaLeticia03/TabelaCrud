@@ -1,3 +1,10 @@
+<?php
+
+require('classe_pessoa.php');
+$p = new Pessoa();
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt">
 
@@ -12,6 +19,7 @@
 
 <body>
     <section id="direita">
+
         <form>
             <h2>Cadastrar Pessoa</h2>
             <label for="nome"> Nome </label>
@@ -28,14 +36,27 @@
             <tr id="titulo">
                 <td>NOME</td>
                 <td>TELEFONE</td>
-                <td>EMAIL</td>
+                <td colspan="2">EMAIL</td>
             </tr>
-            <tr>
-                <td>Maria </td>
-                <td>000000</td>
-                <td colspan="2"> maria@gmail.com</td>
-                <td><a href=""> Editar</a><a href="">Excluir</a> </td>
-            </tr>
+
+            <?php
+            $dados= $p -> buscarDados();
+            if(count($dados) > 0){
+                for($i=0; $i< count($dados); $i++){
+                    echo "<tr>";
+                    foreach ($dados[$i] as $k => $v){
+                        if($k != "id"){
+                            echo "<td>".$v. "</td>";
+                            
+                        }
+                    }
+                    ?>
+            <td> <a href="">Editar</a><a href="">Excluir</a></td>;
+            <?php
+            echo "</tr>";
+            }
+            }
+            ?>
         </table>
 
     </section>
