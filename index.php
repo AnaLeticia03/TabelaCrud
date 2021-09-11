@@ -36,6 +36,12 @@
                 <td colspan="2"> maria@gmail.com</td>
                 <td><a href=""> Editar</a><a href="">Excluir</a> </td>
             </tr>
+            <tr>
+                <td>Daniel Sávio</td>
+                <td>123456</td>
+                <td colspan="2"> maria@gmail.com</td>
+                <td><a href=""> Editar</a><a href="">Excluir</a> </td>
+            </tr>
         </table>
 
     </section>
